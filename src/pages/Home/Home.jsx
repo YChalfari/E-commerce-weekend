@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./style.css";
 import hero from "../../images/tamanna-rumee-eD1RNYzzUxc-unsplash.jpg";
 const Home = () => {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import cathero from "../../images/categories-hero.jpg";
+
 import "./style.css";
 import Api from "../../Api.js";
 
