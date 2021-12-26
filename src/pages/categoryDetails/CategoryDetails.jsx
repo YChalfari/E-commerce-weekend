@@ -5,14 +5,20 @@ class CategoryDetails extends Component {
 
   async componentDidMount() {
     try {
-      const data = await Api.get(this.props.details.city);
       console.log(this.props);
+      const data = await Api.get(`/category/${this.props.details.id}/shoes`);
+
+      const filteredData = data.data.filter(
+        (item) => item.categoryID !== this.props.details.id
+      );
+      console.log(filteredData);
       this.setState({ data: data.data });
-    } catch (err) {}
+    } catch (err) {
+      console.log(err.message);
+    }
   }
 
   render() {
-    console.log("brr");
     return (
       <div>
         <h1>{this.state.data.name}</h1>
